@@ -2,7 +2,7 @@
  * @Author: LaoZhang
  * @Date: 2020-06-14 11:21:48
  * @LastEditors: LaoZhang
- * @LastEditTime: 2020-06-14 15:41:57
+ * @LastEditTime: 2020-06-14 16:08:52
  * @Description: 文件说明
  * @FilePath: /jeek-study/build/webpack.prod.js
  */ 
@@ -24,7 +24,7 @@ module.exports = merge(webpackConfig, {
     new MiniCssExtractPlugin({
       filename: '[name]_[contenthash:8].css'
     }),
-    new OptimizeCSSAssetsPlugin({
+    new OptimizeCSSAssetsPlugin({ // css 压缩
       assetNameRegExp: /\.css$/g,
       cssProcessor: require('cssnano')
     }),
